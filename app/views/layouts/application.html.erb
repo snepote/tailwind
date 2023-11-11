@@ -11,8 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-indigo-300">
+  <body class="bg-white">
     <main class="container mx-auto mt-28 px-5 flex">
+      <%= render 'partials/sidebar' %>
       <%= yield %>
     </main>
   </body>
