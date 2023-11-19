@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,14 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body  class="bg-gray-200">
-    <div class="flex flex-row h-full">
-      <%= render 'partials/sidebar' %>
-      <%= yield %>      
+  <body class="bg-slate-900 flex h-full">
+    <div class="max-w-[50rem] flex flex-col mx-auto w-full h-full">
+      <%= render 'partials/mini-sidebar' %>
+      <div class="container mx-auto">
+        <!-- Content -->
+        <%= yield %>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
 </html>
